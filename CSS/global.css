@@ -1,0 +1,228 @@
+/* Base */
+
+/* '*' permet de sélectionner tous les éléments*/
+* {
+    /* on reset la page css pour tous les navigateurs*/
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /*permet de reset la taille de la police de base à 10px sur tous les navigateur*/
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    color: #555;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 1rem 2rem;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.grid__item {
+    width: 100%;
+}
+
+@media screen and (min-width:750px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+    }
+}
+
+
+/* Sections */
+
+section {
+    padding: 5.5rem 0;
+}
+
+.section-title {
+    color: #000;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+
+.header {
+    background: #FFF;
+    border-bottom: 1px solid #eee;
+}
+
+.header .logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.navbar {
+    display: none;
+}
+
+.header li {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 0.5px;
+}
+
+.header a {
+    color: #333;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+}
+
+.socials .a {
+    padding: 0 3px;
+}
+
+.socials .icon {
+    height: 18px;
+    margin: 0 0.25rem 0 0.25rem;
+}
+
+.burger {
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 1rem;
+}
+
+.burger .bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #333;
+}
+
+.burger .bar::before,
+.burger .bar::after {
+    display: block;
+    content: "";
+    /* c'est pour creer un élément et de l'afficher*/
+    width: 22px;
+    height: 3px;
+    background: #333;
+    position: absolute;
+    /* par rapport a la position du parent */
+}
+
+.burger .bar::before {
+    transform: translateY(-8px);
+}
+
+.burger .bar::after {
+    transform: translateY(8px);
+}
+
+@media screen and (max-width: 749px) {}
+
+@media screen and (min-width:750px) {
+    .navbar {
+        display: flex;
+    }
+
+    .burger {
+        display: none;
+    }
+}
+
+/* Hero */
+
+.hero {
+    background: rgb(39, 104, 202);
+    color: #FFF;
+    padding: 1 rem 0 0 0;
+}
+
+.hero .title {
+    color: inherit;
+    font-size: 4rem;
+    margin: 0.6rem 0 0 0;
+}
+
+.hero__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__item span {
+    text-transform: uppercase;
+}
+
+.hero__avatar img{
+    background: rgb(255, 255, 255);
+}
+
+@media screen and (max-width:749px) {
+    .hero__item.left {
+        order: 2;
+    }
+
+    .hero__item.right {
+        order: 1;
+    }
+}
+
+
+@media screen and (min-width:750px) {
+    .hero__item {
+        flex: 1 0 50%;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .hero .title {
+        font-size: 5rem;
+    }
+    .hero__avatar img {
+        border-radius: 50%;
+        max-width: 400px;
+    }
+}
