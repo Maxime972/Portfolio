@@ -121,14 +121,14 @@ console.log(result);
 //console.log(document.body);
 
 // selector
-let header =document.querySelector('header');
+/*let header =document.querySelector('header');
 let header2 = document.querySelector('header .container'); // fonctionne aussi avec les classes
-let hero = document.getElementById('hero');
+let hero = document.getElementById('hero');*/
 //console.log(header);
 //console.log(header2);
 //console.log(hero);
 
-let grids = document.querySelectorAll('.grid'); // cible tous les éléments grids
+//let grids = document.querySelectorAll('.grid'); // cible tous les éléments grids
 //console.log(grids);
 /*
 grids.forEach (grid => {
@@ -161,7 +161,7 @@ header.addEventListener('mouseleave', () => {
 
 
 // Insertion DOM et navigation dans le DOM
-
+/*
 let div = document.createElement('div');
 div.classList.add('top');
 div.innerHTML = `<span>Top zone</span>`;
@@ -172,3 +172,4 @@ header.parentNode.append(div);
 // le parent du header = body donc div ajouter après le body
 console.log(header.nextElementSibling);
 // affiche le prochain élément après le header => section hero
+*/
